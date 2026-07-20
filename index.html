@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anika Handtke — Project Manager</title>
-<meta name="description" content="Anika Handtke — Project Manager, cross-functional digital delivery. Based in Malmö, Sweden.">
+<title>Anika Handtke, Project Manager</title>
+<meta name="description" content="Anika Handtke, Project Manager, cross-functional digital delivery. Based in Malmö, Sweden.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -175,19 +175,40 @@
   .card p{color:var(--gray);font-size:13.5px;margin-top:10px;}
 
   /* ---- Experience list ---- */
-  .exp-item{
-    display:grid;grid-template-columns:140px 1fr auto;gap:24px;
-    padding:28px 0;border-bottom:1px solid var(--line);
-    align-items:start;
+  /* ---- Timeline ---- */
+  .timeline{position:relative;padding-left:36px;}
+  .timeline::before{
+    content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1px;
+    background:var(--line);
   }
-  @media (max-width:700px){ .exp-item{grid-template-columns:1fr;gap:8px;} }
-  .exp-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);}
-  .exp-role{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;}
-  .exp-org{color:var(--gray);font-size:13.5px;margin-top:4px;}
-  .exp-tag{
-    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gray);
-    border:1px solid var(--line);padding:4px 10px;border-radius:20px;white-space:nowrap;
+  .tl-item{position:relative;padding-bottom:52px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:'';position:absolute;left:-36px;top:6px;
+    width:11px;height:11px;border-radius:50%;
+    background:var(--black);border:2px solid var(--accent);
   }
+  .tl-item.is-current::before{
+    background:var(--accent);
+  }
+  .tl-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+  .tl-role{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;
+    text-transform:uppercase;letter-spacing:-0.01em;
+  }
+  .tl-current{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--accent);
+    border:1px solid var(--accent);border-radius:20px;padding:2px 9px;
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  .tl-org{color:var(--gray);font-size:14px;margin-bottom:14px;}
+  .tl-pills{display:flex;flex-wrap:wrap;gap:8px;}
+  .pill{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#c9c9cd;
+    border:1px solid var(--line);border-radius:20px;padding:5px 12px;
+    white-space:nowrap;
+  }
+  .pill.pill-muted{color:var(--gray);border-style:dashed;}
 
   /* ---- Quote ---- */
   .quote{
@@ -252,50 +273,32 @@
 <section class="hero">
   <div class="eyebrow">Project Manager · Cross-Functional Delivery</div>
   <h1>Anika<br>Handtke</h1>
-  <p class="hero-sub">Project Manager building calm, cross-functional delivery out of complex, international teams. Five years turning ambiguous briefs into shipped work — with a 3D art background most PMs don't bring to the table.</p>
+  <p class="hero-sub">Project Manager keeping calm, cross-functional delivery running across complex, international teams. Five years managing production, from ambiguous briefs to finished work, alongside marketing and creative teams.</p>
   <div class="hero-meta">
     <div>Currently<strong>Massive Entertainment, Malmö</strong></div>
     <div>Certification<strong>PSM I, Scrum.org</strong></div>
     <div>Languages<strong>German (native), English</strong></div>
-  </div>
-  <div class="stamp" aria-hidden="true">
-    <div class="stamp-inner">
-      <svg viewBox="0 0 150 150">
-        <defs>
-          <path id="circlePath" d="M 75,75 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0"/>
-        </defs>
-        <text font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="3" fill="#8c8c92">
-          <textPath href="#circlePath" startOffset="0%">PROJECT DELIVERY · CROSS-FUNCTIONAL TEAMS · </textPath>
-        </text>
-      </svg>
-      <div class="stamp-center">
-        <div class="num">5+</div>
-        <div class="lbl">YRS PM</div>
-      </div>
-    </div>
   </div>
 </section>
 
 <section id="about">
   <div class="section-head reveal">
     <div>
-      <span class="section-num">01 — Profile</span>
+      <span class="section-num">01 · Profile</span>
       <h2>About</h2>
     </div>
-    <p class="section-note">The short version: I make sure ambitious, international teams know what they're building and why — without losing the people doing the building.</p>
+    <p class="section-note">The short version: I make sure ambitious, international teams know what they're building and why, without losing the people doing the building.</p>
   </div>
   <div class="about-grid reveal">
     <div class="about-text">
-      <p>I started as a <strong>3D artist</strong>, which turned out to be the best possible training for project management I didn't know I was getting — I understand what's actually hard about the work I'm now scheduling, reviewing, and unblocking.</p>
-      <p>Over five years I moved through project assistant and coordinator roles into full ownership of cross-functional digital delivery, currently at <strong>Massive Entertainment</strong>, a Ubisoft studio in Malmö. I manage international partner studios, run process and tooling for teams that span disciplines and time zones, and I'm <strong>PSM I certified</strong>.</p>
-      <p>I'm now looking to bring that delivery discipline outside of games — into agencies, tech, and product teams building things people actually use.</p>
+      <p>I started out as a 3D artist. That background still shapes how I manage now, I know what's actually hard about the work I'm scheduling and unblocking, not just how it looks on a plan.</p>
+      <p>Over five years I moved from project assistant to coordinator to full ownership of cross-functional delivery, currently at Massive Entertainment, a Ubisoft studio in Malmö. I work with international partner studios, keep process and tooling running for teams that span disciplines and time zones, and I'm PSM I certified.</p>
+      <p>What matters most to me is keeping teams aligned without losing the people actually doing the work.</p>
     </div>
     <div class="facts">
       <div class="fact-row"><span class="k">Based in</span><span class="v">Malmö, Sweden</span></div>
-      <div class="fact-row"><span class="k">Open to</span><span class="v">Netherlands, Germany</span></div>
-      <div class="fact-row"><span class="k">Native language</span><span class="v">German</span></div>
+      <div class="fact-row"><span class="k">Languages</span><span class="v">German (native), English</span></div>
       <div class="fact-row"><span class="k">Certification</span><span class="v">PSM I (Scrum.org)</span></div>
-      <div class="fact-row"><span class="k">Background</span><span class="v">3D art → project management</span></div>
       <div class="fact-row"><span class="k">Currently</span><span class="v">Massive Entertainment (Ubisoft)</span></div>
     </div>
   </div>
@@ -304,7 +307,7 @@
 <section id="expertise">
   <div class="section-head reveal">
     <div>
-      <span class="section-num">02 — Strengths</span>
+      <span class="section-num">02 · Strengths</span>
       <h2>Where I Add Value</h2>
     </div>
     <p class="section-note">Four things I consistently bring to a team, in no particular order.</p>
@@ -314,7 +317,7 @@
       <span class="n">01</span>
       <div>
         <h3>People-first leadership</h3>
-        <p>Manager-of-managers experience across international partner studios — built on trust, not just process.</p>
+        <p>Manager-of-managers experience across international partner studios, built on trust, not just process.</p>
       </div>
     </div>
     <div class="card">
@@ -334,8 +337,8 @@
     <div class="card">
       <span class="n">04</span>
       <div>
-        <h3>Creative fluency</h3>
-        <p>A 3D art and rigging background means I can talk to creative disciplines in their own language — rare for a PM.</p>
+        <h3>Calm under pressure</h3>
+        <p>Keeps teams steady when priorities shift fast, without losing sight of the people doing the work.</p>
       </div>
     </div>
   </div>
@@ -344,66 +347,77 @@
 <section id="experience">
   <div class="section-head reveal">
     <div>
-      <span class="section-num">03 — Path</span>
+      <span class="section-num">03 · Path</span>
       <h2>Experience</h2>
     </div>
+    <p class="section-note">Five years at Massive Entertainment, working up from intern to owning delivery on shipped, multi-million-player titles.</p>
   </div>
-  <div class="reveal">
-    <div class="exp-item">
-      <div class="exp-date">Current</div>
-      <div>
-        <div class="exp-role">Project Manager</div>
-        <div class="exp-org">Massive Entertainment — a Ubisoft studio, Malmö</div>
-        <div class="exp-org" style="margin-top:6px;color:var(--gray);font-size:12px;">Projects: [add project name(s)]</div>
+  <div class="reveal timeline">
+    <div class="tl-item is-current">
+      <div class="tl-head">
+        <span class="tl-role">Project Manager</span>
+        <span class="tl-current">Current</span>
       </div>
-      <div class="exp-tag">PSM I certified</div>
+      <div class="tl-org">Massive Entertainment, a Ubisoft studio, Malmö</div>
+      <div class="tl-pills">
+        <span class="pill pill-muted">Additional unannounced titles, NDA</span>
+        <span class="pill">Avatar: Frontiers of Pandora, From the Ashes</span>
+        <span class="pill">Star Wars Outlaws, A Pirate's Fortune</span>
+      </div>
     </div>
-    <div class="exp-item">
-      <div class="exp-date">Earlier</div>
-      <div>
-        <div class="exp-role">Project Coordinator / Project Assistant</div>
-        <div class="exp-org">Ubisoft Berlin</div>
-        <div class="exp-org" style="margin-top:6px;color:var(--gray);font-size:12px;">Projects: [add project name(s)]</div>
+    <div class="tl-item">
+      <div class="tl-head"><span class="tl-role">Project Coordinator</span></div>
+      <div class="tl-org">Massive Entertainment, a Ubisoft studio, Malmö</div>
+      <div class="tl-pills">
+        <span class="pill">Star Wars Outlaws, Wild Card</span>
+        <span class="pill">Star Wars Outlaws</span>
+        <span class="pill">Avatar: Frontiers of Pandora</span>
       </div>
-      <div class="exp-tag">Cross-functional</div>
     </div>
-    <div class="exp-item">
-      <div class="exp-date">Start</div>
-      <div>
-        <div class="exp-role">3D Artist</div>
-        <div class="exp-org">Character &amp; rigging — the roots of the creative fluency above</div>
+    <div class="tl-item">
+      <div class="tl-head"><span class="tl-role">Project Assistant</span></div>
+      <div class="tl-org">Massive Entertainment, a Ubisoft studio, Malmö</div>
+      <div class="tl-pills">
+        <span class="pill pill-muted">Unreleased title, NDA</span>
       </div>
-      <div class="exp-tag">Creative background</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-head"><span class="tl-role">Intern</span></div>
+      <div class="tl-org">Studio Fizbin GmbH</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-head"><span class="tl-role">BA, Animation &amp; Interactive Technology</span></div>
+      <div class="tl-org">Hochschule Darmstadt, Video Graphics &amp; Special Effects, including a 3D artist internship at The Apic</div>
     </div>
   </div>
 </section>
 
 <section id="quote">
   <div class="reveal">
-    <span class="section-num">04 — In their words</span>
+    <span class="section-num">04 · In their words</span>
     <p class="quote">"You're doing things <span>before I realize they need to be done.</span>"</p>
-    <div class="quote-attr">— A manager, former colleague</div>
+    <div class="quote-attr">A manager</div>
   </div>
   <div class="reveal" style="margin-top:56px;">
     <p class="quote">"An affinity for <span>chaos and stress</span> that is almost scary."</p>
-    <div class="quote-attr">— A collaborator, former colleague</div>
+    <div class="quote-attr">A collaborator</div>
   </div>
   <div class="reveal" style="margin-top:56px;">
-    <p class="quote">"I need <span>the German girl</span> on this."</p>
-    <div class="quote-attr">— A partner studio lead, former colleague</div>
+    <p class="quote">"I told them: <span>I need the German girl on this.</span>"</p>
+    <div class="quote-attr">A director</div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="reveal">
-    <span class="section-num">05 — Get in touch</span>
-    <h2 class="contact-title">Let's <a href="mailto:hello@anikahandtke.com">talk</a></h2>
+    <span class="section-num">05 · Get in touch</span>
+    <h2 class="contact-title">Let's <a href="mailto:anika.hand@gmx.de">talk</a></h2>
   </div>
   <div class="contact-row reveal">
     <ul class="contact-links">
-      <li><a href="mailto:hello@anikahandtke.com">Email</a></li>
-      <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="#" target="_blank" rel="noopener">CV (PDF)</a></li>
+      <li><a href="mailto:anika.hand@gmx.de">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/anika-handtke" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li>CV available on request</li>
     </ul>
     <span class="copyright">© 2026 Anika Handtke</span>
   </div>
