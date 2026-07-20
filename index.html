@@ -42,10 +42,9 @@
     padding:20px 32px;max-width:1200px;margin:0 auto;
   }
   .logo{
-    font-family:'Space Grotesk',sans-serif;font-weight:700;
-    font-size:18px;letter-spacing:-0.02em;
+    display:flex;align-items:center;gap:11px;
   }
-  .logo span{color:var(--accent);}
+  .logo-mark{flex-shrink:0;display:block;}
   .nav-links{display:flex;gap:32px;list-style:none;}
   .nav-links a{
     font-family:'IBM Plex Mono',monospace;font-size:12px;
@@ -55,12 +54,22 @@
   }
   .nav-links a:hover, .nav-links a:focus-visible{color:var(--off-white);}
 
+  @media (max-width:640px){
+    nav{padding:16px 20px;flex-wrap:wrap;row-gap:10px;column-gap:16px;}
+    .logo-mark{width:42px;height:26px;}
+    .nav-links{gap:14px;flex-wrap:wrap;}
+    .nav-links a{font-size:10px;}
+  }
+
   /* ---- Hero ---- */
   .hero{
     position:relative;
     padding:120px 32px 100px;
     max-width:1200px;margin:0 auto;
     border-bottom:1px solid var(--line);
+  }
+  @media (max-width:640px){
+    .hero{padding:56px 20px 48px;}
   }
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;font-size:12px;
@@ -69,7 +78,7 @@
   }
   .eyebrow::before{
     content:'';width:8px;height:8px;background:var(--accent);
-    border-radius:50%;display:inline-block;
+    display:inline-block;
     animation:pulse 2s ease-in-out infinite;
   }
   @keyframes pulse{
@@ -94,31 +103,9 @@
     color:var(--off-white);font-size:14px;margin-top:4px;
   }
 
-  /* signature element: rotated relocation stamp */
-  .stamp{
-    position:absolute;top:110px;right:32px;
-    width:150px;height:150px;
-    border:1.5px solid var(--accent);
-    border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    transform:rotate(-8deg);
-  }
-  .stamp-inner{
-    position:relative;width:100%;height:100%;
-  }
-  .stamp svg{width:100%;height:100%;position:absolute;top:0;left:0;animation:spin 16s linear infinite;}
   @media (prefers-reduced-motion: reduce){
-    .stamp svg{animation:none;}
     .eyebrow::before{animation:none;}
   }
-  @keyframes spin{ to{ transform:rotate(360deg); } }
-  .stamp-center{
-    position:absolute;inset:0;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;
-  }
-  .stamp-center .num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;color:var(--accent);}
-  .stamp-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--gray);letter-spacing:.05em;margin-top:2px;}
-  @media (max-width:860px){ .stamp{display:none;} }
 
   /* ---- Section shared ---- */
   section{padding:100px 32px;max-width:1200px;margin:0 auto;border-bottom:1px solid var(--line);}
@@ -185,7 +172,7 @@
   .tl-item:last-child{padding-bottom:0;}
   .tl-item::before{
     content:'';position:absolute;left:-36px;top:6px;
-    width:11px;height:11px;border-radius:50%;
+    width:11px;height:11px;
     background:var(--black);border:2px solid var(--accent);
   }
   .tl-item.is-current::before{
@@ -198,14 +185,14 @@
   }
   .tl-current{
     font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--accent);
-    border:1px solid var(--accent);border-radius:20px;padding:2px 9px;
+    border:1px solid var(--accent);padding:2px 9px;
     text-transform:uppercase;letter-spacing:.05em;
   }
   .tl-org{color:var(--gray);font-size:14px;margin-bottom:14px;}
   .tl-pills{display:flex;flex-wrap:wrap;gap:8px;}
   .pill{
     font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#c9c9cd;
-    border:1px solid var(--line);border-radius:20px;padding:5px 12px;
+    border:1px solid var(--line);padding:5px 12px;
     white-space:nowrap;
   }
   .pill.pill-muted{color:var(--gray);border-style:dashed;}
@@ -260,7 +247,15 @@
 
 <header>
   <nav>
-    <div class="logo">ANIKA<span>.</span>HANDTKE</div>
+    <div class="logo">
+      <svg class="logo-mark" width="52" height="32" viewBox="0 0 430 260" xmlns="http://www.w3.org/2000/svg" role="img">
+        <title>Anika Handtke</title>
+        <line x1="185" y1="35" x2="96.5" y2="203.2" stroke="#f5f3ee" stroke-width="34"/>
+        <line x1="235" y1="35" x2="235" y2="225" stroke="#f5f3ee" stroke-width="34"/>
+        <line x1="308" y1="35" x2="308" y2="225" stroke="#f5f3ee" stroke-width="34"/>
+        <rect x="70" y="123" width="290" height="34" style="fill:var(--accent)"/>
+      </svg>
+    </div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#expertise">Expertise</a></li>
@@ -417,7 +412,7 @@
     <ul class="contact-links">
       <li><a href="mailto:anika.hand@gmx.de">Email</a></li>
       <li><a href="https://www.linkedin.com/in/anika-handtke" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li>In-depth CV with available on request</li>
+      <li>In-depth CV available on request</li>
     </ul>
     <span class="copyright">© 2026 Anika Handtke</span>
   </div>
