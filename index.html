@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anika Handtke, Project Manager</title>
 <meta name="description" content="Anika Handtke, Project Manager, cross-functional digital delivery. Based in Malmö, Sweden.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMwYjBiMGMiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMxLjUyLDE1LjUpIHNjYWxlKDAuNjUpIj4KPHBvbHlnb24gcG9pbnRzPSIxODAsMzUgMTgwLDEwOS4xMiAxMTkuMTMsMjI1IDgwLjY5LDIyNSIgZmlsbD0iI2Y1ZjNlZSIvPgo8bGluZSB4MT0iMjM1IiB5MT0iMzUiIHgyPSIyMzUiIHkyPSIyMjUiIHN0cm9rZT0iI2Y1ZjNlZSIgc3Ryb2tlLXdpZHRoPSIzNCIvPgo8bGluZSB4MT0iMzA3IiB5MT0iMzUiIHgyPSIzMDciIHkyPSIyMjUiIHN0cm9rZT0iI2Y1ZjNlZSIgc3Ryb2tlLXdpZHRoPSIzNCIvPgo8cG9seWdvbiBwb2ludHM9IjEyNy4yMSwxMzYgMzI0LDEzNiAzMjQsMTcwIDEwOS40NCwxNzAiIGZpbGw9IiNmZjNkNWUiLz4KPC9nPgo8L3N2Zz4=">
+<link rel="alternate icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMwYjBiMGMiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMxLjUyLDE1LjUpIHNjYWxlKDAuNjUpIj4KPHBvbHlnb24gcG9pbnRzPSIxODAsMzUgMTgwLDEwOS4xMiAxMTkuMTMsMjI1IDgwLjY5LDIyNSIgZmlsbD0iI2Y1ZjNlZSIvPgo8bGluZSB4MT0iMjM1IiB5MT0iMzUiIHgyPSIyMzUiIHkyPSIyMjUiIHN0cm9rZT0iI2Y1ZjNlZSIgc3Ryb2tlLXdpZHRoPSIzNCIvPgo8bGluZSB4MT0iMzA3IiB5MT0iMzUiIHgyPSIzMDciIHkyPSIyMjUiIHN0cm9rZT0iI2Y1ZjNlZSIgc3Ryb2tlLXdpZHRoPSIzNCIvPgo8cG9seWdvbiBwb2ludHM9IjEyNy4yMSwxMzYgMzI0LDEzNiAzMjQsMTcwIDEwOS40NCwxNzAiIGZpbGw9IiNmZjNkNWUiLz4KPC9nPgo8L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -150,7 +152,7 @@
   @media (max-width:520px){ .card-grid{grid-template-columns:1fr;} }
   .card{
     background:var(--black);padding:32px 24px;min-height:220px;
-    display:flex;flex-direction:column;justify-content:space-between;
+    display:flex;flex-direction:column;
     transition:background .25s ease;
   }
   .card:hover{background:#141416;}
@@ -193,8 +195,10 @@
   .pill{
     font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#c9c9cd;
     border:1px solid var(--line);padding:5px 12px;
-    white-space:nowrap;
+    white-space:nowrap;text-decoration:none;display:inline-block;
+    transition:border-color .2s ease,color .2s ease;
   }
+  a.pill:hover{border-color:var(--accent);color:var(--off-white);}
   .pill.pill-muted{color:var(--gray);border-style:dashed;}
 
   /* ---- Quote ---- */
@@ -268,7 +272,7 @@
 <section class="hero">
   <div class="eyebrow">Project Manager · Cross-Functional Delivery</div>
   <h1>Anika<br>Handtke</h1>
-  <p class="hero-sub">Project Manager keeping calm, cross-functional delivery running across complex, international teams. Five years managing production, from ambiguous briefs to finished work, alongside marketing and creative teams.</p>
+  <p class="hero-sub">I'm usually the person my team comes to when something's unclear, or when things are quietly falling apart. Five years in project management have taught me that keeping people steady matters just as much as keeping a project on track.</p>
   <div class="hero-meta">
     <div>Currently<strong>Massive Entertainment, Malmö</strong></div>
     <div>Certification<strong>PSM I, Scrum.org</strong></div>
@@ -288,7 +292,7 @@
     <div class="about-text">
       <p>I started out as a 3D artist. That background still shapes how I manage now, I know what's actually hard about the work I'm scheduling and unblocking, not just how it looks on a plan.</p>
       <p>Over five years I moved from project assistant to coordinator to full ownership of cross-functional delivery, currently at Massive Entertainment, a Ubisoft studio in Malmö. I work with international partner studios, keep process and tooling running for teams that span disciplines and time zones, and I'm PSM I certified.</p>
-      <p>What matters most to me is keeping teams aligned without losing the people actually doing the work.</p>
+      <p>What matters most to me is that the people on my team actually want to come to work, and that the ones quietly holding things together get noticed for it.</p>
     </div>
     <div class="facts">
       <div class="fact-row"><span class="k">Based in</span><span class="v">Malmö, Sweden</span></div>
@@ -311,8 +315,8 @@
     <div class="card">
       <span class="n">01</span>
       <div>
-        <h3>People-first leadership</h3>
-        <p>Manager-of-managers experience across international partner studios, built on trust, not just process.</p>
+        <h3>Empathy first</h3>
+        <p>I notice when someone's overloaded before they say it out loud, and I actually do something about it, not just note it.</p>
       </div>
     </div>
     <div class="card">
@@ -356,17 +360,17 @@
       <div class="tl-org">Massive Entertainment, a Ubisoft studio, Malmö</div>
       <div class="tl-pills">
         <span class="pill pill-muted">Additional unannounced titles, NDA</span>
-        <span class="pill">Avatar: Frontiers of Pandora, From the Ashes</span>
-        <span class="pill">Star Wars Outlaws, A Pirate's Fortune</span>
+        <a class="pill" href="https://store.steampowered.com/app/3823590/From_The_Ashes_Expansion__Avatar_Frontiers_of_Pandora/" target="_blank" rel="noopener">Avatar: Frontiers of Pandora, From the Ashes</a>
+        <a class="pill" href="https://store.steampowered.com/app/3541390/Star_Wars_Outlaws_A_Pirates_Fortune_DLC/" target="_blank" rel="noopener">Star Wars Outlaws, A Pirate's Fortune</a>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-head"><span class="tl-role">Project Coordinator</span></div>
       <div class="tl-org">Massive Entertainment, a Ubisoft studio, Malmö</div>
       <div class="tl-pills">
-        <span class="pill">Star Wars Outlaws, Wild Card</span>
-        <span class="pill">Star Wars Outlaws</span>
-        <span class="pill">Avatar: Frontiers of Pandora</span>
+        <a class="pill" href="https://store.steampowered.com/app/3271130/Star_Wars_Outlaws_Wild_Card_DLC/" target="_blank" rel="noopener">Star Wars Outlaws, Wild Card</a>
+        <a class="pill" href="https://store.steampowered.com/app/2842040/Star_Wars_Outlaws/" target="_blank" rel="noopener">Star Wars Outlaws</a>
+        <a class="pill" href="https://store.steampowered.com/app/2840770/Avatar_Frontiers_of_Pandora/" target="_blank" rel="noopener">Avatar: Frontiers of Pandora</a>
       </div>
     </div>
     <div class="tl-item">
@@ -394,7 +398,7 @@
     <div class="quote-attr">A manager</div>
   </div>
   <div class="reveal" style="margin-top:56px;">
-    <p class="quote">"An affinity for <span>chaos and stress</span> that is almost scary."</p>
+    <p class="quote">"A calm in <span>chaos and stress</span> that is almost scary."</p>
     <div class="quote-attr">A collaborator</div>
   </div>
   <div class="reveal" style="margin-top:56px;">
@@ -414,7 +418,7 @@
       <li><a href="https://www.linkedin.com/in/anika-handtke" target="_blank" rel="noopener">LinkedIn</a></li>
       <li>In-depth CV available on request</li>
     </ul>
-    <span class="copyright">© 2026 Anika Handtke</span>
+    <span class="copyright">Made by Anika Handtke, 2026</span>
   </div>
 </footer>
 
