@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
 <style>
 .mark { fill: #111111; }
 .markstroke { stroke: #111111; }
@@ -7,8 +7,10 @@
   .markstroke { stroke: #f5f3ee; }
 }
 </style>
+<g transform="translate(-53.02,1.69) scale(0.7562)">
 <polygon class="mark" points="180,35 180,109.12 119.13,225 80.69,225"/>
 <line class="markstroke" x1="235" y1="35" x2="235" y2="225" stroke-width="34"/>
 <line class="markstroke" x1="307" y1="35" x2="307" y2="225" stroke-width="34"/>
 <polygon points="127.21,136 324,136 324,170 109.44,170" fill="#ff3d5e"/>
+</g>
 </svg>
